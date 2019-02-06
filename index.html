@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style.css">
   <title>Rock Paper Scissors</title>
 </head>
@@ -14,16 +16,69 @@
 <body>
   <section class="container">
     <section class="row">
-      <div class="col-md-12">
-        <h1>Rock Paper Scissors!</h1>
+      <div class="col-md-12 text-center py-3">
+        <h1>THE THREE STOOGES FACE-OFF</h1>
       </div>
     </section>
     <section class="row">
-      <div class="col-md-6" id="buttons"></div>
-      <div class="col-md-6" id="result"> Choose Your Weapon!</div>
+      <div class="col-md-12 text-center py-3">
+        <h1>Choose your attack</h1>
+      </div>
     </section>
-  </section>
 
+    <section class="row">
+
+      <div class="col-md-4">
+        <div class="card pt-3 d-flex flex-column justify-content-between align-items-center">
+          <i class="far fa-hand-rock fa-7x"></i>
+          <div class="card-body d-flex flex-column justify-content-between align-items-center">
+            <h4 class="card-title">PUNCH</h4>
+            <p class="card-text">
+              Punch them in the head!
+            </p>
+            <a onclick="play('rock')" class="btn btn-primary w-100">Wield</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card pt-3 d-flex flex-column justify-content-between align-items-center">
+          <i class="far fa-hand-paper fa-7x"></i>
+          <div class="card-body d-flex flex-column justify-content-between align-items-center">
+            <h4 class="card-title">SLAP</h4>
+            <p class="card-text">
+              Slap them silly!
+            </p>
+            <a onclick="play('rock')" class="btn btn-primary w-100">Wield</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card pt-3 d-flex flex-column justify-content-between align-items-center">
+          <i class="far fa-hand-scissors fa-7x"></i>
+          <div class="card-body d-flex flex-column justify-content-between align-items-center">
+            <h4 class="card-title">EYE POKE</h4>
+            <p class="card-text">
+              Poke them in the eyes!
+            </p>
+            <a onclick="play('rock')" class="btn btn-primary w-100 ">Wield</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row">
+
+      <div class="col-md-12">
+        <h1 class="text-center pt-4" id="result">
+
+        </h1>
+      </div>
+
+    </section>
+
+  </section>
 
 
 

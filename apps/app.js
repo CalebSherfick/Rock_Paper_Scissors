@@ -29,34 +29,45 @@ function play(playerChoice) {
   //resultStr variable = ''
   if (playerChoice == 'rock') {
     if (computerChoice == 'rock') {
-      window.alert("Woah, you TIED!")
+      window.alert("You TIED: You fists bumped each other...")
     } else if (computerChoice == 'paper') {
-      window.alert("You LOST, it's a wrap!")
+      window.alert("You LOST: They caught your punch in their hand!")
     } else {
-      window.alert("You WON, you crushed em'!")
+      window.alert("You WON: You knocked them in the head!")
     }
   } else if (playerChoice == 'paper') {
     if (computerChoice == 'rock') {
-      window.alert("You WON, they got smothered!")
+      window.alert("You WON: You caught their punch in your hand!")
     } else if (computerChoice == 'paper') {
-      window.alert("Woah, you TIED!")
+      window.alert("You TIED: You high fived each other...")
     } else {
-      window.alert("You LOST, cut it out!")
+      window.alert("You LOST: They poked you in the eyes!")
     }
   } else if (playerChoice == 'scissors') {
     if (computerChoice == 'rock') {
-      window.alert("You LOST, they crushed you!")
+      window.alert("You LOST: They punched you in the face!")
     } else if (computerChoice == 'paper') {
-      window.alert("You WON, you cut them to shreds!")
+      window.alert("You WON: You countered their slap with an eye poke!")
     } else {
-      window.alert("Woah, you TIED!")
+      window.alert("You TIED: You poked each other in the eyes...")
     }
   }
 
 }
 
 
-// console.log(play(playerChoice, computerChoice))
+function computerResult(weapon) {
+  document.getElementById('result').innerHTML = `
+  <h1>Test</h1>`
+}
+
+
+// function makeSound(animal) {
+//   document.getElementById('result').innerHTML = `
+//   <h1>The ${animal} Says: ${animalSounds[animal.toLowerCase()].sound}</h1>
+//   <img class="animal-pic" src="${animalSounds[animal].img}"/>
+//   `
+// }
 
 
 
