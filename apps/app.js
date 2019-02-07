@@ -67,26 +67,28 @@ function play(playerChoice) {
       tieCount++;
     }
   }
+  fightPrompt()
   computerResult()
   scoreKeeper()
 }
 
 
 function computerResult() {
-  document.getElementById('result').innerHTML = `
-  <h1>Your opponent chose ${computerChoice}.</h1>
-  <h2>${resultStr}</h2>
-  <br>
-  <h1>Go ahead and make another move</h1>`
+  document.getElementById('result').innerHTML = `<h3>Your opponent chose ${computerChoice}.</h3>
+  <h3>${resultStr}</h2>`
+}
+
+function fightPrompt() {
+  document.getElementById('goAgain').innerHTML = `<h1>Go ahead and make another move</h1>`
 }
 
 
 
 
 function scoreKeeper() {
-  document.getElementById('playerWins').innerText = `Your Strikes Hit: ${playerWins}`
+  document.getElementById('playerWins').innerText = `Strikes Landed: ${playerWins}`
   document.getElementById('tieCount').innerText = `Ties: ${tieCount}`
-  document.getElementById('compWins').innerText = `Opponent Strikes Hit: ${compWins}`
+  document.getElementById('compWins').innerText = `Times Hit: ${compWins}`
 }
 
 

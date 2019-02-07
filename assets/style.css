@@ -1,7 +1,32 @@
-.weapon-image {
-max-width: 70%;
+.h-100 {
+  height: 100vh;
+}
+
+.container {    
+  background-color: #e1e1e8;
+}
+
+
+
+.title-color {
+  background-color: #2b2d42;
+  color: #e1e1e8;
+}
+
+.results {
+  background-color: #b6becb;
 }
 
 .card {
   height: 100%;
+  border-radius: 0px;
 }
+
+.btn {
+  background-color: #459fff;
+  color: #e1e1e8;
+}
+
+/* .results-row {
+  height: 100vh;
+} */

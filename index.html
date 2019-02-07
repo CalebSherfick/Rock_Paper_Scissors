@@ -14,16 +14,16 @@
 </head>
 
 <body>
-  <section class="container">
+  <section class="container h-100">
     <section class="row">
-      <div class="col-md-12 text-center py-3">
+      <div class="col-md-12 text-center title-color py-2">
         <h1>THE THREE STOOGES FACE-OFF</h1>
       </div>
     </section>
 
     <section class="row align-items-center justify-content-center">
       <div class="col-md-12">
-        <h1 class="text-center pt-4">
+        <h1 class="text-center py-2" id="goAgain">
           Choose your attack!
         </h1>
       </div>
@@ -39,7 +39,7 @@
             <p class="card-text">
               Punch them in the head!
             </p>
-            <a onclick="play('punch')" class="btn btn-primary w-100">PUNCH</a>
+            <a onclick="play('punch')" class="btn w-100">PUNCH</a>
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@
             <p class="card-text">
               Slap them silly!
             </p>
-            <a onclick="play('slap')" class="btn btn-primary w-100">SLAP</a>
+            <a onclick="play('slap')" class="btn w-100">SLAP</a>
           </div>
         </div>
       </div>
@@ -65,63 +65,43 @@
             <p class="card-text">
               Poke them in the eyes!
             </p>
-            <a onclick="play('eyes')" class="btn btn-primary w-100 ">POKE</a>
+            <a onclick="play('eyes')" class="btn w-100 ">POKE</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="row align-items-center justify-content-center">
+    <section class="row align-items-center justify-content-center results-row">
       <div class="col-md-12">
-        <h1 class="text-center pt-4" id="result">
+        <h1 class="text-center pt-3 pb-4 h-100 results" id="result">
           Read here for results!
         </h1>
       </div>
     </section>
 
-    <section class="row align-items-center justify-content-center">
-      <div class="col-md-4">
-        <h1 class="text-center pt-4" id="playerWins">
-          Your Strikes Hit: 0
-        </h1>
-      </div>
-      <div class="col-md-4">
-        <h1 class="text-center pt-4" id="tieCount">
-          Ties: 0
-        </h1>
-      </div>
-      <div class="col-md-4">
-        <h1 class="text-center pt-4" id="compWins">
-          Opponent Strikes Hit: 0
-        </h1>
-
+    <section class="row">
+      <div class="col-md-12 title-color">
+        <div class="row">
+          <div class="col-md-4 d-flex align-items-end justify-content-center py-2">
+            <h1 class="text-center" id="playerWins">
+              Strikes Landed: 0
+            </h1>
+          </div>
+          <div class="col-md-4 d-flex align-items-end justify-content-center py-2">
+            <h1 class="text-center" id="tieCount">
+              Ties: 0
+            </h1>
+          </div>
+          <div class="col-md-4 d-flex align-items-end justify-content-center py-2">
+            <h1 class="text-center" id="compWins">
+              Times Hit: 0
+            </h1>
+          </div>
+        </div>
       </div>
     </section>
 
-
-
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <button onclick="play('rock')">Rock</button>
-  <button onclick="play('paper')">Paper</button>
-  <button onclick="play('scissors')">Scissors</button> -->
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
