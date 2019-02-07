@@ -9,11 +9,12 @@ console.log('Start')
 // }
 
 let comOptions = {
-  rock: 'rock',
-  paper: 'paper',
-  scissors: 'scissors'
+  punch: 'punch',
+  slap: 'slap',
+  eyes: 'eyes'
 }
 
+let computerChoice = ''
 
 function setComputerChoice() {
   let choices = Object.keys(comOptions)
@@ -23,53 +24,46 @@ function setComputerChoice() {
 }
 
 
+let resultStr = 'waiting for game to be played'
+
 
 function play(playerChoice) {
-  let computerChoice = setComputerChoice()
-  //resultStr variable = ''
-  if (playerChoice == 'rock') {
-    if (computerChoice == 'rock') {
-      window.alert("You TIED: You fists bumped each other...")
-    } else if (computerChoice == 'paper') {
-      window.alert("You LOST: They caught your punch in their hand!")
+  computerChoice = setComputerChoice()
+  if (playerChoice == 'punch') {
+    if (computerChoice == 'punch') {
+      resultStr = "You TIED: Your fists bumped each other..."
+    } else if (computerChoice == 'slap') {
+      resultStr = "You LOST: They caught your punch in their hand!"
     } else {
-      window.alert("You WON: You knocked them in the head!")
+      resultStr = "You WON: You knocked them in the head!"
     }
-  } else if (playerChoice == 'paper') {
-    if (computerChoice == 'rock') {
-      window.alert("You WON: You caught their punch in your hand!")
-    } else if (computerChoice == 'paper') {
-      window.alert("You TIED: You high fived each other...")
+  } else if (playerChoice == 'slap') {
+    if (computerChoice == 'punch') {
+      resultStr = "You WON: You caught their punch in your hand!"
+    } else if (computerChoice == 'slap') {
+      resultStr = "You TIED: You high fived each other..."
     } else {
-      window.alert("You LOST: They poked you in the eyes!")
+      resultStr = "You LOST: They poked you in the eyes!"
     }
-  } else if (playerChoice == 'scissors') {
-    if (computerChoice == 'rock') {
-      window.alert("You LOST: They punched you in the face!")
-    } else if (computerChoice == 'paper') {
-      window.alert("You WON: You countered their slap with an eye poke!")
+  } else if (playerChoice == 'eyes') {
+    if (computerChoice == 'punch') {
+      resultStr = "You LOST: They punched you in the face!"
+    } else if (computerChoice == 'slap') {
+      resultStr = "You WON: You countered their slap with an eye poke!"
     } else {
-      window.alert("You TIED: You poked each other in the eyes...")
+      resultStr = "You TIED: You poked each other in the eyes..."
     }
   }
-
+  computerResult()
 }
 
 
-function computerResult(weapon) {
+function computerResult() {
   document.getElementById('result').innerHTML = `
-  <h1>Test</h1>`
+  <h1>Your opponent chose ${computerChoice}.</h1>
+  <h2>${resultStr}</h2>`
 }
-
-
-// function makeSound(animal) {
-//   document.getElementById('result').innerHTML = `
-//   <h1>The ${animal} Says: ${animalSounds[animal.toLowerCase()].sound}</h1>
-//   <img class="animal-pic" src="${animalSounds[animal].img}"/>
-//   `
-// }
-
-
+// computerResult()
 
 
 
