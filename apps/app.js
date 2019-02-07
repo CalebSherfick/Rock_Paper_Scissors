@@ -31,7 +31,7 @@ function play(playerChoice) {
   computerChoice = setComputerChoice()
   if (playerChoice == 'punch') {
     if (computerChoice == 'punch') {
-      resultStr = "You TIED: Your fists bumped each other..."
+      resultStr = "You TIED: You fist bumped each other..."
     } else if (computerChoice == 'slap') {
       resultStr = "You LOST: They caught your punch in their hand!"
     } else {
