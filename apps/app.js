@@ -79,7 +79,7 @@ function computerResult() {
 }
 
 function fightPrompt() {
-  document.getElementById('goAgain').innerHTML = `<h1>Go ahead and make another move</h1>`
+  document.getElementById('goAgain').innerText = `Go ahead and make another move`
 }
 
 
